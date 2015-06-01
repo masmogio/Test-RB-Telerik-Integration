@@ -1,4 +1,93 @@
 {
   "type": "kendo-ui-mobile",
-  "isNew": true
+  "name": "kendoUiMobileApp",
+  "navigation": "tabstrip",
+  "views": [
+    {
+      "type": "view",
+      "name": "signInView",
+      "title": "Sign In",
+      "addToNavigation": true,
+      "components": [
+        {
+          "type": "signin",
+          "name": "signInViewModel",
+          "dataProvider": "dsJarmoApp",
+          "usernameLabel": "Username",
+          "passwordLabel": "Password",
+          "confirmLabel": "Sign In",
+          "signinRedirect": "dataListView",
+          "navigateToSignup": false,
+          "usernamePlaceholder": "",
+          "passwordPlaceholder": ""
+        }
+      ],
+      "icon": "contacts"
+    },
+    {
+      "type": "view",
+      "name": "dataListView",
+      "title": "Products",
+      "addToNavigation": true,
+      "components": [
+        {
+          "type": "list",
+          "name": "dataListViewModel",
+          "dataProvider": "craBackend",
+          "masterDetails": true,
+          "pullToRefresh": false,
+          "endlessScroll": false,
+          "iconField": false,
+          "subHeaderField": "Description",
+          "collection": "References",
+          "headerField": "Product"
+        }
+      ],
+      "icon": "organize"
+    },
+    {
+      "type": "view",
+      "name": "aboutView",
+      "title": "About",
+      "addToNavigation": true,
+      "components": [
+        {
+          "type": "about",
+          "name": "aboutViewModel",
+          "contactButton": true,
+          "facebookButton": false,
+          "twitterButton": false,
+          "appName": "Test Rollbase Integration with Telerik",
+          "appVersion": "Version 1",
+          "appDescription": "An example of the integration between Rollbase and Telerik",
+          "contactLabel": "Contact us",
+          "contactMail": "msaez@progress.com"
+        }
+      ],
+      "icon": "info"
+    }
+  ],
+  "view": "signInView",
+  "skin": "flat",
+  "dataProviders": [
+    {
+      "type": "dataProvider",
+      "name": "dsJarmoApp",
+      "title": "Jarmo App / DS Jarmo App",
+      "source": "everlive",
+      "everliveUrl": "//platform.telerik.com/bs-api/v1/",
+      "offlineStorage": false,
+      "everliveKey": "PFrNS4NHLVLx9k0h"
+    },
+    {
+      "type": "dataProvider",
+      "name": "craBackend",
+      "title": "CRA / CRA Backend",
+      "source": "everlive",
+      "everliveUrl": "//platform.telerik.com/bs-api/v1/",
+      "offlineStorage": true,
+      "everliveKey": "y2N9tck0qZLw2NdJ"
+    }
+  ],
+  "transition": "slide"
 }

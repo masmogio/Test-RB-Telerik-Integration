@@ -1,0 +1,14 @@
+{
+  "dependsOn": [
+    "generator-kendo-ui-mobile@0.0.6"
+  ],
+  "generator-kendo-ui-mobile": {
+    "cleanup": [
+      "./data/dsJarmoApp.js",
+      "./data/craBackend.js",
+      "./signInView",
+      "./dataListView",
+      "./aboutView"
+    ]
+  }
+}
