@@ -1,0 +1,48 @@
+{
+  "ProjectName": "RB Integration with ScreenBuilder Hybrid",
+  "ProjectGuid": "100342f3-3a5a-4696-8203-538b83c1a8f1",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.RBIntegrationwithScreenBuilderHybrid",
+  "DisplayName": "RB Integration with ScreenBuilder Hybrid",
+  "Author": "",
+  "Description": "",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "3.7.0",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "false",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [
+    "ID_CAP_NETWORKING",
+    "ID_CAP_WEBBROWSERCOMPONENT"
+  ],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{3d626fdd-f10c-420a-8e0b-e68052c74d61}",
+  "WP8ProductID": "{d95a3557-36dd-40dc-84ce-0e1f902558e0}",
+  "WPSdk": "8.0",
+  "WP8PackageIdentityName": "1234Telerik.RBIntegrationwithScreenBuilderHybrid",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ],
+  "CorePlugins": [
+    "org.apache.cordova.network-information"
+  ]
+}
