@@ -4,7 +4,7 @@ app.signInView = kendo.observable({
     onShow: function() {}
 });
 (function(parent) {
-    var provider = app.data.dsJarmoApp,
+    var provider = app.data.rollbaseProvider,
         signinSuccess =
         function(data) {
             app.user = data.result;
@@ -12,7 +12,7 @@ app.signInView = kendo.observable({
         },
         signinInit =
         function() {
-            if (provider.setup.offlineStorage && !app.isOnline()) {
+            if (!app.isOnline()) {
                 $('.signin-view').hide().siblings().show();
             } else {
                 $('.signin-view').show().siblings().hide();
@@ -22,8 +22,9 @@ app.signInView = kendo.observable({
             username: '',
             password: '',
             signin: function() {
-                provider.Users.login(signInViewModel.username, signInViewModel.password,
-                    function(data) {
+                provider.login(signInViewModel.username, signInViewModel.password,
+                    function (data) {
+                        alert("tu madree");
                         if (data && data.result) {
                             signinSuccess(data);
                         } else {
@@ -35,15 +36,15 @@ app.signInView = kendo.observable({
         });
 
     parent.set('signInViewModel', signInViewModel);
-    parent.set('onShow', function() {
-        provider.Users.currentUser().then(
+   parent.set('onShow', function() {
+        provider.then(
             function(data) {
                 if (data && data.result) {
                     signinSuccess(data);
-                } else {
+        } else {
                     signinInit();
-                }
-            },
+        }
+        },
             signinInit
         );
     });
